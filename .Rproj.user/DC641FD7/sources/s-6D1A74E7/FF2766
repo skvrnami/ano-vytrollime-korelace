@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1558941719384.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "FF2766",
+    "lastKnownWriteTime" : 6,
+    "last_content_update" : 1558941719384,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "A0D94269",
+        "caption" : "okres_wide_pct",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=okres_wide_pct&cache_key=A0D94269",
+        "displayedObservations" : "77",
+        "environment" : "",
+        "object" : "okres_wide_pct",
+        "preview" : "0",
+        "totalObservations" : "77",
+        "variables" : "40"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1558942817279.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "3E056714",
+    "lastKnownWriteTime" : 6,
+    "last_content_update" : 1558942817279,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "9194F7F0",
+        "caption" : "okresy_votes",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=okresy_votes&cache_key=9194F7F0",
+        "displayedObservations" : "77",
+        "environment" : "",
+        "object" : "okresy_votes",
+        "preview" : "0",
+        "totalObservations" : "77",
+        "variables" : "40"
+    },
+    "relative_order" : 8,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

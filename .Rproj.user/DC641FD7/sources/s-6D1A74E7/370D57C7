@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1558943402933.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "370D57C7",
+    "lastKnownWriteTime" : 6,
+    "last_content_update" : 1558943402933,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "DEF790B8",
+        "caption" : "municipalities_ano",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=municipalities_ano&cache_key=DEF790B8",
+        "displayedObservations" : "6379",
+        "environment" : "",
+        "object" : "municipalities_ano",
+        "preview" : "0",
+        "totalObservations" : "6379",
+        "variables" : "5"
+    },
+    "relative_order" : 9,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

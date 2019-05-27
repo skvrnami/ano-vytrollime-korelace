@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1558941305578.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "A901F7D0",
+    "lastKnownWriteTime" : 1558945989,
+    "last_content_update" : 1558945989551,
+    "path" : "~/repos/github/ano-vytrollime-korelace/script.R",
+    "project_path" : "script.R",
+    "properties" : {
+        "cursorPosition" : "160,0",
+        "scrollLine" : "138",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

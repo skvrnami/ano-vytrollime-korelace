@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1558941545739.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "10767AC4",
+    "lastKnownWriteTime" : 6,
+    "last_content_update" : 1558941545739,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "29DEF814",
+        "caption" : "okres_votes",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=okres_votes&cache_key=29DEF814",
+        "displayedObservations" : "2991",
+        "environment" : "",
+        "object" : "okres_votes",
+        "preview" : "0",
+        "totalObservations" : "2991",
+        "variables" : "4"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}
