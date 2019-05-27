@@ -137,6 +137,13 @@ obce_results %>%
            `30` = ifelse(is.na(`30`), 0, `30`)) %>%
     mutate(total_votes = `6` + `30`) -> municipalities_ano
 
+obce_results %>%
+    group_by(municipality_id) %>%
+    summarise(total_votes_municipality = sum(votes)) -> obce_voters
+
+municipalities_ano %>%
+    left_join(., obce_voters, by = "municipality_id") -> municipalities_ano
+
 simulate_vote_error <- function(mun_size, p_troll = 0.06868){
     # počet hlasů, které by dostalo ANO, vytrollíme europarlament
     # v obci s `mun_size` voliči, pokud pravděpodobnost záměny lístku 
@@ -150,9 +157,11 @@ simulate_cor <- function(){
     municipalities_ano %>%
         mutate(expected_troll = purrr::map_int(total_votes, 
                                                function(x) simulate_vote_error(mun_size = x))) %>%
-        mutate(expected_ano = total_votes - expected_troll) -> sim_results
+        mutate(expected_ano = total_votes - expected_troll) %>%
+        mutate(expected_ano_pct = expected_ano / total_votes_municipality, 
+               expected_troll_pct = expected_troll / total_votes_municipality) -> sim_results
     
-    cor(sim_results$expected_ano, sim_results$expected_troll)
+    cor(sim_results$expected_ano_pct, sim_results$expected_troll_pct)
 }
 
 corrs <- replicate(1000, simulate_cor())
