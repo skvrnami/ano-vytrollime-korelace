@@ -1,86 +1,0 @@
-]0;~/repos/github/ano-vytrollime-korelace[?1034hMichael-MacBook-Pro:ano-vytrollime-korelace skvrnami$ [KMichael-MacBook-Pro:ano-vytrollime-korelace skvrnami$ git init
-Initialized empty Git repository in /Users/skvrnami/repos/github/ano-vytrollime-korelace/.git/
-]0;~/repos/github/ano-vytrollime-korelaceMichael-MacBook-Pro:ano-vytrollime-korelace skvrnami$ git add -A
-]0;~/repos/github/ano-vytrollime-korelaceMichael-MacBook-Pro:ano-vytrollime-korelace skvrnami$ git commit -m "First commit"
-[master (root-commit) 067668a] First commit
- 30 files changed, 105715 insertions(+)
- create mode 100644 .Rproj.user/DC641FD7/console06/166621C7
- create mode 100644 .Rproj.user/DC641FD7/console06/INDEX001
- create mode 100644 .Rproj.user/DC641FD7/sources/prop/7F6E9AEA
- create mode 100644 .Rproj.user/DC641FD7/sources/prop/INDEX
- create mode 100644 .Rproj.user/DC641FD7/sources/s-6D1A74E7/10767AC4
- create mode 100644 .Rproj.user/DC641FD7/sources/s-6D1A74E7/10767AC4-contents
- create mode 100644 .Rproj.user/DC641FD7/sources/s-6D1A74E7/1355D5AD
- create mode 100644 .Rproj.user/DC641FD7/sources/s-6D1A74E7/1355D5AD-contents
- create mode 100644 .Rproj.user/DC641FD7/sources/s-6D1A74E7/236FF4D6
- create mode 100644 .Rproj.user/DC641FD7/sources/s-6D1A74E7/236FF4D6-contents
- create mode 100644 .Rproj.user/DC641FD7/sources/s-6D1A74E7/370D57C7
- create mode 100644 .Rproj.user/DC641FD7/sources/s-6D1A74E7/370D57C7-contents
- create mode 100644 .Rproj.user/DC641FD7/sources/s-6D1A74E7/3E056714
- create mode 100644 .Rproj.user/DC641FD7/sources/s-6D1A74E7/3E056714-contents
- create mode 100644 .Rproj.user/DC641FD7/sources/s-6D1A74E7/72F99C9E
- create mode 100644 .Rproj.user/DC641FD7/sources/s-6D1A74E7/72F99C9E-contents
- create mode 100644 .Rproj.user/DC641FD7/sources/s-6D1A74E7/924124F
- create mode 100644 .Rproj.user/DC641FD7/sources/s-6D1A74E7/924124F-contents
- create mode 100644 .Rproj.user/DC641FD7/sources/s-6D1A74E7/A901F7D0
- create mode 100644 .Rproj.user/DC641FD7/sources/s-6D1A74E7/A901F7D0-contents
- create mode 100644 .Rproj.user/DC641FD7/sources/s-6D1A74E7/B5CDBF09
- create mode 100644 .Rproj.user/DC641FD7/sources/s-6D1A74E7/B5CDBF09-contents
- create mode 100644 .Rproj.user/DC641FD7/sources/s-6D1A74E7/FF2766
- create mode 100644 .Rproj.user/DC641FD7/sources/s-6D1A74E7/FF2766-contents
- create mode 100644 .Rproj.user/DC641FD7/sources/s-6D1A74E7/lock_file
- create mode 100644 .Rproj.user/shared/notebooks/patch-chunk-names
- create mode 100644 .Rproj.user/shared/notebooks/paths
- create mode 100644 ano-vytrollime-korelace.Rproj
- create mode 100644 eu_obce_vysledky.csv
- create mode 100644 script.R
-]0;~/repos/github/ano-vytrollime-korelaceMichael-MacBook-Pro:ano-vytrollime-korelace skvrnami$ git status
-On branch master
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
-
-	[31mmodified:   .Rproj.user/DC641FD7/console06/166621C7[m
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-
-	[31m.Rproj.user/DC641FD7/console06/166621C7.env[m
-
-no changes added to commit (use "git add" and/or "git commit -a")
-]0;~/repos/github/ano-vytrollime-korelaceMichael-MacBook-Pro:ano-vytrollime-korelace skvrnami$ git pus[K[K[K[K[K[K[Kgit remote add origin https://github. com/skvrnami/ano-vytrollime-korelace.git
-]0;~/repos/github/ano-vytrollime-korelaceMichael-MacBook-Pro:ano-vytrollime-korelace skvrnami$ git push -u origin master
-Enumerating objects: 29, done.
-Counting objects:   3% (1/29)   Counting objects:   6% (2/29)   Counting objects:  10% (3/29)   Counting objects:  13% (4/29)   Counting objects:  17% (5/29)   Counting objects:  20% (6/29)   Counting objects:  24% (7/29)   Counting objects:  27% (8/29)   Counting objects:  31% (9/29)   Counting objects:  34% (10/29)   Counting objects:  37% (11/29)   Counting objects:  41% (12/29)   Counting objects:  44% (13/29)   Counting objects:  48% (14/29)   Counting objects:  51% (15/29)   Counting objects:  55% (16/29)   Counting objects:  58% (17/29)   Counting objects:  62% (18/29)   Counting objects:  65% (19/29)   Counting objects:  68% (20/29)   Counting objects:  72% (21/29)   Counting objects:  75% (22/29)   Counting objects:  79% (23/29)   Counting objects:  82% (24/29)   Counting objects:  86% (25/29)   Counting objects:  89% (26/29)   Counting objects:  93% (27/29)   Counting objects:  96% (28/29)   Counting objects: 100% (29/29)   Counting objects: 100% (29/29), done.
-Delta compression using up to 4 threads
-Compressing objects:   3% (1/27)   Compressing objects:   7% (2/27)   Compressing objects:  11% (3/27)   Compressing objects:  14% (4/27)   Compressing objects:  18% (5/27)   Compressing objects:  22% (6/27)   Compressing objects:  25% (7/27)   Compressing objects:  29% (8/27)   Compressing objects:  33% (9/27)   Compressing objects:  37% (10/27)   Compressing objects:  40% (11/27)   Compressing objects:  44% (12/27)   Compressing objects:  48% (13/27)   Compressing objects:  51% (14/27)   Compressing objects:  55% (15/27)   Compressing objects:  59% (16/27)   Compressing objects:  62% (17/27)   Compressing objects:  66% (18/27)   Compressing objects:  70% (19/27)   Compressing objects:  74% (20/27)   Compressing objects:  77% (21/27)   Compressing objects:  81% (22/27)   Compressing objects:  85% (23/27)   Compressing objects:  88% (24/27)   Compressing objects:  92% (25/27)   Compressing objects:  96% (26/27)   Compressing objects: 100% (27/27)   Compressing objects: 100% (27/27), done.
-Writing objects:   3% (1/29)   Writing objects:   6% (2/29)   Writing objects:  10% (3/29)   Writing objects:  13% (4/29)   Writing objects:  17% (5/29)   Writing objects:  20% (6/29)   Writing objects:  24% (7/29)   Writing objects:  27% (8/29)   Writing objects:  31% (9/29)   Writing objects:  34% (10/29)   Writing objects:  37% (11/29)   Writing objects:  41% (12/29)   Writing objects:  51% (15/29)   Writing objects:  55% (16/29)   Writing objects:  62% (18/29)   Writing objects:  68% (20/29)   Writing objects:  72% (21/29)   Writing objects:  75% (22/29)   Writing objects:  79% (23/29)   Writing objects:  82% (24/29)   Writing objects:  86% (25/29)   Writing objects:  89% (26/29)   Writing objects:  93% (27/29)   Writing objects:  96% (28/29)   Writing objects: 100% (29/29)   Writing objects: 100% (29/29), 537.08 KiB | 2.02 MiB/s, done.
-Total 29 (delta 8), reused 0 (delta 0)
-remote: Resolving deltas:   0% (0/8)   [Kremote: Resolving deltas: 100% (8/8)   [Kremote: Resolving deltas: 100% (8/8), done.[K
-To https://github.com/skvrnami/ano-vytrollime-korelace.git
- * [new branch]      master -> master
-Branch 'master' set up to track remote branch 'master' from 'origin'.
-]0;~/repos/github/ano-vytrollime-korelaceMichael-MacBook-Pro:ano-vytrollime-korelace skvrnami$ git a[Kstatus
-On branch master
-Your branch is up to date with 'origin/master'.
-
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
-
-	[31mmodified:   .Rproj.user/DC641FD7/console06/166621C7[m
-	[31mmodified:   .Rproj.user/DC641FD7/sources/prop/7F6E9AEA[m
-	[31mmodified:   .Rproj.user/DC641FD7/sources/prop/INDEX[m
-	[31mmodified:   .Rproj.user/DC641FD7/sources/s-6D1A74E7/236FF4D6[m
-	[31mmodified:   .Rproj.user/DC641FD7/sources/s-6D1A74E7/A901F7D0[m
-	[31mmodified:   .Rproj.user/DC641FD7/sources/s-6D1A74E7/A901F7D0-contents[m
-	[31mmodified:   .Rproj.user/shared/notebooks/paths[m
-	[31mmodified:   script.R[m
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-
-	[31m.gitignore[m
-
-no changes added to commit (use "git add" and/or "git commit -a")
-]0;~/repos/github/ano-vytrollime-korelaceMichael-MacBook-Pro:ano-vytrollime-korelace skvrnami$ git add -A
