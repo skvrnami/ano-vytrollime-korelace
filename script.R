@@ -50,7 +50,7 @@ obce_wide_pct[is.na(obce_wide_pct)] <- 0.0
 
 obce_wide_pct %>%
     select(-c(municipality_id, okres)) %>%
-    correlate(., use = "everything") %>%
+    correlate(., use = "everything", method = "spearman") %>%
     stretch() -> cor_obce_pct
 
 cor_obce_pct %>%
@@ -77,7 +77,7 @@ okres_wide_pct[is.na(okres_wide_pct)] <- 0.0
 okres_wide_pct %>%
     ungroup %>%
     select(-okres) %>%
-    correlate %>%
+    correlate(., method = "spearman") %>%
     stretch() -> okres_pct_corr
 
 # ANO + ANO, vytrollíme...
@@ -97,7 +97,7 @@ obce_wide_votes[is.na(obce_wide_votes)] <- 0
 
 obce_wide_votes %>%
     select(-c(municipality_id, okres)) %>%
-    correlate(., use = "everything") %>%
+    correlate(., use = "everything", method = "spearman") %>%
     stretch() -> cor_obce_votes
 
 cor_obce_votes %>%
@@ -161,9 +161,68 @@ simulate_cor <- function(){
         mutate(expected_ano_pct = expected_ano / total_votes_municipality, 
                expected_troll_pct = expected_troll / total_votes_municipality) -> sim_results
     
-    cor(sim_results$expected_ano_pct, sim_results$expected_troll_pct)
+    cor(sim_results$expected_ano_pct, sim_results$expected_troll_pct, method = "spearman")
 }
 
 corrs <- replicate(1000, simulate_cor())
 
 summary(corrs)
+
+# simulace pro okresy
+okresy_votes %>%
+    select_if(is.numeric) %>%
+    mutate(votes_total = rowSums(.)) %>%
+    select(`6`, `30`, votes_total) %>%
+    mutate(votes_both_ano = `6` + `30`) -> okresy_ano
+
+simulate_cor_okres <- function(){
+    okresy_ano %>%
+        mutate(expected_troll = purrr::map_int(votes_both_ano, function(x) simulate_vote_error(mun_size = x))) %>%
+        mutate(expected_ano = votes_both_ano - expected_troll) %>%
+        mutate(expected_ano_pct = expected_ano / votes_total, 
+               expected_troll_pct = expected_troll / votes_total) -> sim_results
+    
+    cor(sim_results$expected_ano_pct, sim_results$expected_troll_pct, method = "spearman")
+}
+
+corrs_okres <- replicate(1000, simulate_cor_okres())
+
+summary(corrs_okres)
+
+library(ggplot2)
+obce_wide_pct %>%
+    select(ano_troll = `6`, 
+           ano = `30`) %>%
+    ggplot(., aes(x = ano, y = ano_troll)) + 
+    geom_point() + 
+    geom_smooth(method = "lm") + 
+    theme_minimal()
+
+municipalities_ano %>%
+    mutate(expected_troll = purrr::map_int(total_votes, 
+                                           function(x) simulate_vote_error(mun_size = x))) %>%
+    mutate(expected_ano = total_votes - expected_troll) %>%
+    mutate(expected_ano_pct = expected_ano / total_votes_municipality, 
+           expected_troll_pct = expected_troll / total_votes_municipality) %>%
+    ggplot(., aes(x = expected_ano_pct, y = expected_troll_pct)) + 
+    geom_point() + 
+    geom_smooth(method = "lm") + 
+    theme_minimal()
+
+okres_wide_pct %>%
+    select(ano_troll = `6`, 
+           ano = `30`) %>%
+    ggplot(., aes(x = ano, y = ano_troll)) + 
+    geom_point() + 
+    geom_smooth(method = "lm") + 
+    theme_minimal()
+    
+okresy_ano %>%
+    mutate(expected_troll = purrr::map_int(votes_both_ano, function(x) simulate_vote_error(mun_size = x))) %>%
+    mutate(expected_ano = votes_both_ano - expected_troll) %>%
+    mutate(expected_ano_pct = expected_ano / votes_total, 
+           expected_troll_pct = expected_troll / votes_total) %>%
+    ggplot(., aes(x = expected_ano_pct, y = expected_troll_pct)) + 
+    geom_point() + 
+    geom_smooth(method = "lm") + 
+    theme_minimal()
